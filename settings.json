@@ -1,0 +1,160 @@
+/*
+  This file must be valid JSON. But comments are allowed
+
+  Please edit settings.json, not settings.json.template
+*/
+{
+  // name your instance!
+  "title": "Zoin Official Block Explorer",
+
+  //"address": "explorer.zoinofficial.com",
+  "address": "159.64.40.111:3001",
+
+  // coin name
+  "coin": "Zoin",
+
+  // coin symbol
+  "symbol": "ZOI",
+
+  // logo
+  "logo": "/images/logo.png",
+
+  // favicon
+  "favicon": "public/favicon.ico",
+
+  // Uses bootswatch themes (http://bootswatch.com/)
+  "theme": "zoin",
+
+  // port to listen for requests on.
+  "port" : 3001,
+
+  // database settings (MongoDB)
+  "dbsettings": {
+    "user": "zoindb",
+    "password": "YDyJ4xRLCJ",
+    "database": "zoin",
+    "address": "localhost",
+    "port": 27017
+  },
+
+  //update script settings
+  "update_timeout": 10,
+  "check_timeout": 250,
+
+  // wallet settings
+  "wallet": {
+    "host": "127.0.0.1",
+    "port": 8822,
+    "user": "root",
+    "pass": "rootroot"
+  },
+
+  // confirmations
+  "confirmations": 120,
+
+  // language settings
+  "locale": "locale/en.json",
+
+  // menu settings
+  "display": {
+    "api": true,
+    "markets": true,
+    "richlist": true,
+    "twitter": true,
+    "facebook": true,
+    "googleplus": false,
+    "search": true,
+    "movement": true,
+    "zerocoin": true,
+    "network": true
+  },
+
+  // index page (valid options for difficulty are POW, POS or Hybrid)
+  "index": {
+    "show_hashrate": true,
+    "difficulty": "POW",
+    "last_txs": 100
+  },
+
+  // ensure links on API page are valid
+  "api": {
+    "blockindex": 5001,
+    "blockhash": "33e77b7d0375153a58362f471f47c334a3d56192bc74ee44f60b492c8ff91fab",
+    "txhash": "7ce291cb6a307ecdfd4adcdf89e632582b1ea027c157434b7c5c77f28d7f711f",
+    "address": "ZDzxsf7N8ie8EXgMd2uLtUgcetyXFUHdp2"
+  },
+
+  // market settings
+  //supported markets: bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
+  //default market is loaded by default and determines last price in header
+  "markets": {
+    "coin": "ZOI",
+    "exchange": "BTC",
+    "enabled": ["cryptopia"],
+    "cryptopia_id": "ZOI_BTC",
+    "ccex_key" : "Get-Your-Own-Key",
+    "default": "cryptopia"
+  },
+
+  // richlist/top100 settings
+  "richlist": {
+    "distribution": true,
+    "received": true,
+    "balance": true
+  },
+  // movement page settings
+  // min amount: show transactions greater than this value
+  // low flag: greater than this value flagged yellow
+  // high flag: greater than this value flagged red
+  "movement": {
+    "min_amount": 100,
+    "low_flag": 1000,
+    "high_flag": 5000
+  },
+
+  // twitter, facebook, googleplus
+  "twitter": "zoinofficial",
+  "facebook": "officialzoin",
+  "googleplus": "zoinofficial",
+
+  //genesis
+  "genesis_tx": "4f193d83c304ebd3bf2319611cbb84f26af7960f23d06dd243b6c93ebf4d7797",
+  "genesis_block": "23911212a525e3d149fcad6c559c8b17f1e8326a272a75ff9bb315c8d96433ef",
+
+  //heavy (enable/disable additional heavy features)
+  "heavy": false,
+
+  //amount of txs to index per address (stores latest n txs)
+  "txcount": 100,
+
+  //show total sent & received on address page (set false if PoS)
+  "show_sent_received": true,
+
+  // how to calculate current coin supply
+  // COINBASE : total sent from coinbase (PoW)
+  // GETINFO : retreive from getinfo api call (PoS)
+  // HEAVY: retreive from heavys getsupply api call
+  // BALANCES : total of all address balances
+  // TXOUTSET : retreive from gettxoutsetinfo api call
+  "supply": "COINBASE",
+
+  // how to acquire network hashrate
+  // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
+  // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
+  "nethash": "getnetworkhashps",
+
+  // nethash unitd: sets nethash API return units
+  // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
+  "nethash_units": "K",
+
+  // Address labels
+  // example : "JhbrvAmM7kNpwA6wD5KoAsbtikLWWMNPcM": {"label": "This is a burn address", "type":"danger", "url":"http://example.com"}
+  // label (required) = test to display
+  // type (optional) = class of label, valid types: default, primary, warning, danger, success
+  // url (optional) = url to link to for more information
+  // "ZEQHowk7caz2DDuDsoGwcg3VeF3rvk28V8": {"label": "btc38", "type":"warning", "url":"https://www.cryptopia.co.nz/Exchange/?market=ZOI_BTC"},
+  "labels": {
+    "ZEQHowk7caz2DDuDsoGwcg3VeF3rvk28V8": {"label": "founder's wallet"},
+    "ZMcH1qLoiGgsPFqA9BAfdb5UVvLfkejhAZ": {"label": "founder's wallet"}
+  }
+}
