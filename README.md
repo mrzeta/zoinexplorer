@@ -1,4 +1,4 @@
-Zoin Block Explorer v0.2.0
+Zoin Block Explorer v1.0.0
 ================
 
 A block explorer written in node.js (based on Iquidus Explorer - 1.6.1)
