@@ -189,7 +189,7 @@ tr {
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
     color: #6836a4;
     text-decoration-line: underline;
-    background-color: none;
+    background-color: #FFF;
     /*background-color: #cabbdf;*/
 }
 .navbar-default .navbar-nav>li>a{
