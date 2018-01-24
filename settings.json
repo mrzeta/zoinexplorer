@@ -8,7 +8,7 @@
   "title": "Zoin Official Block Explorer",
 
   //"address": "explorer.zoinofficial.com",
-  "address": "159.64.40.111:3001",
+  "address": "159.64.40.111",
 
   // coin name
   "coin": "Zoin",
@@ -58,10 +58,10 @@
   // menu settings
   "display": {
     "api": true,
-    "markets": true,
+    "markets": false,
     "richlist": true,
-    "twitter": true,
-    "facebook": true,
+    "twitter": false,
+    "facebook": false,
     "googleplus": false,
     "search": true,
     "movement": true,

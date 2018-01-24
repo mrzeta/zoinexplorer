@@ -194,40 +194,40 @@ is_locked(function (exists) {
               });
             }
           });
-        } else if (database == 'history') {
-          //update market history
-          var ticker = 'ZOI',
-              genesis = new Date('2016/10/06'),
-              completed = 0,
-              completedThread = 0,
-              req_url = 'http://coinmarketcap.northpole.ro/api/v5/history/TTT_YYYY.json',
-              urls = [];
-          for(year = genesis.getUTCFullYear(); year <= new Date().getUTCFullYear(); year++) {
-            var uri = req_url
-              .replace('TTT', ticker)
-              .replace('YYYY', year)
-            urls.push(uri)
-          }
-          async.map(urls, function(url, callback) {
-            var results = 0;
-            console.log('loading data: %s', url);
-            request({uri: url, json: true}, function (error, response) {
-              if(!error) {
-                var json = response.toJSON().body
-                results = results + Object.keys(json.history).length;
-                for (var date in json.history) {
-                  var data = json.history[date];
-                  db.update_market_history(date, data, function(err, result) {
-                    completed++;
-                    if(completed == results) completedThread++;
-                    if(completedThread == urls.length) exit();
-                  })
-                }
-              } else {
-                console.log("Failed loading: ", req_url)
-              }
-            });
-          })
+        // } else if (database == 'history') {
+        //   //update market history
+        //   var ticker = 'ZOI',
+        //       genesis = new Date('2016/10/06'),
+        //       completed = 0,
+        //       completedThread = 0,
+        //       req_url = 'http://coinmarketcap.northpole.ro/api/v5/history/TTT_YYYY.json',
+        //       urls = [];
+        //   for(year = genesis.getUTCFullYear(); year <= new Date().getUTCFullYear(); year++) {
+        //     var uri = req_url
+        //       .replace('TTT', ticker)
+        //       .replace('YYYY', year)
+        //     urls.push(uri)
+        //   }
+        //   async.map(urls, function(url, callback) {
+        //     var results = 0;
+        //     console.log('loading data: %s', url);
+        //     request({uri: url, json: true}, function (error, response) {
+        //       if(!error) {
+        //         var json = response.toJSON().body
+        //         results = results + Object.keys(json.history).length;
+        //         for (var date in json.history) {
+        //           var data = json.history[date];
+        //           db.update_market_history(date, data, function(err, result) {
+        //             completed++;
+        //             if(completed == results) completedThread++;
+        //             if(completedThread == urls.length) exit();
+        //           })
+        //         }
+        //       } else {
+        //         console.log("Failed loading: ", req_url)
+        //       }
+        //     });
+        //   })
         } else {
           //update markets
           var markets = settings.markets.enabled;
