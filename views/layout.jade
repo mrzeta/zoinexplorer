@@ -189,20 +189,20 @@ html
       .row.text-center(style='margin-top:10px;margin-bottom:20px;')
         form.form-inline(method='post', action='/search')
           #index-search.form-group
-            input.form-control(type='text', name='search', placeholder='#{settings.locale.ex_search_message}', style='min-width:80%;margin-right:5px;')
-            button.btn.btn-success(type='submit') #{settings.locale.ex_search_button}
+            input.form-control(type='text', name='search', placeholder='#{settings.locale.ex_search_message}', style='min-width:80%;margin-right:5px;border-radius:4px;')
+            button.btn.btn-success.fa.fa-search(type='submit',style='height: 39px;border-radius:4px;background-color: #44118d;border-color: #44118d;') #{settings.locale.ex_search_button}
     block content
-    .navbar.navbar-default.navbar-fixed-bottom.hidden-xs
+    .navbar.navbar-default.navbar-fixed-bottom.hidden-xs(style='border-top: 1px solid #cabbdf;')
       .col-md-4
         if settings.display.twitter
           ul.nav.navbar-nav
             li.pull-left
-              a#twitter-icon(href="https://twitter.com/#{settings.twitter}", target='_blank')
+              a#twitter-icon(href="https://twitter.com/#{settings.twitter}", target='_blank',style='line-height: 21px;')
                 span.glyphicon.fa.fa-twitter
         if settings.display.facebook
           ul.nav.navbar-nav
             li.pull-left
-              a#facebook-icon(href="https://facebook.com/officialzoin", target='_blank')
+              a#facebook-icon(href="https://facebook.com/officialzoin", target='_blank' ,style='line-height: 21px;')
                 span.glyphicon.fa.fa-facebook
         if settings.display.googleplus
           ul.nav.navbar-nav
