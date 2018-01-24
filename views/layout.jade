@@ -84,7 +84,7 @@ html
       .container-fluid
         .navbar-header
           a.navbar-brand(href='/')
-           img(src='/images/header-logo.png', style='height: 60px;')
+           img(src='/images/header-logo.png', style='height: 50px;')
         .collapse.navbar-collapse(id='navbar-collapse')
           ul.nav.navbar-nav
             li#home
@@ -209,6 +209,11 @@ html
             li.pull-left
               a#googleplus-icon(href="https://plus.google.com/#{settings.googleplus}", target='_blank')
                 span.glyphicon.fa.fa-google-plus
+      .col-md-4
+        ul.nav
+          li.text-center(style='margin-left:80px;margin-right:80px;')
+            p(style='margin-top:15px;')
+              a.navbar-link(href='https://github.com/mrzeta/zoinexplorer', target='_blank') Powered by Mrzeta
       span.connections
         label#lblBlockcount.label.label-default -
         label#lblConnections.label.label-default -
