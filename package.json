@@ -21,6 +21,7 @@
     "mongodb": "2.2.19",
     "mongoose": "4.5.0",
     "markdown-js": "0.0.3",
+    "async": "2.6.0",
     "qr-image": "~2.0.0"
   },
   "devDependencies": {
