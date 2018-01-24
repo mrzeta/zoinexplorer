@@ -184,7 +184,10 @@ tr {
 .navbar-fixed-top{
 	height:60px;
 	font-size:16px;
-	background: none;
+	background: #FFF;
+}
+.navbar-default{
+	background-color:#FFF;
 }
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
     color: #6836a4;
