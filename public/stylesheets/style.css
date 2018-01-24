@@ -163,3 +163,26 @@ tr {
 	position: absolute;
 	bottom: 0px;
 }
+.navbar{
+	height:60px;
+	font-size:16px;
+}
+.navbar-brand{
+	padding: 0px 15px 0px 15px;
+}
+.navbar-nav>li>a{
+    line-height: 35px;
+}
+.menu-text{
+	font-size: 16px;
+}
+.panel-default{
+	border-radius: 3px;
+	border: 2px solid #cabade;
+}
+/* footer */
+.connections label{
+	border-radius: 5px;
+	font-size: 14px;
+	color:#43ac6a;
+}
