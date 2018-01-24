@@ -23,7 +23,7 @@
   "favicon": "public/favicon.ico",
 
   // Uses bootswatch themes (http://bootswatch.com/)
-  "theme": "zoin",
+  "theme": "Yeti",
 
   // port to listen for requests on.
   "port" : 3001,
