@@ -190,6 +190,7 @@ label {
 	width: 110px;
 	margin-right: 30px;
 	text-indent: -300px;
+	padding:0px 15px 0px 15px;
 	/* probably not needed anymore, but doesn't hurt */
 	-o-object-fit: contain;
 	object-fit: contain;
